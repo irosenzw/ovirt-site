@@ -129,7 +129,7 @@ To resume HA functionality, use:
 
 ### **Local maintenance**
 
-Main use is to allow the administrator to maintain one or more hosts. Note that if you have only 2 nodes and one is in maintenance,
+Main use is to allow the administrator to maintain this host. Note that if you have only 2 nodes and one is in maintenance,
 there is only one host available to run the engine VM. The way to maintain a host is by using:
 
          # hosted-engine --set-maintenance --mode=local
