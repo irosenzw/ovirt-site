@@ -27,7 +27,7 @@ Greg Padgett <gpadgett@redhat.com>, Martin Sivak <msivak@redhat.com>
 *   NFS-based shared storage (since 3.4.0) or [iSCSI storage](/develop/release-management/features/sla/self-hosted-engine-iscsi-support/) (since 3.5.0 beta)
 *   Access to the oVirt repository
 
-## **Fresh Install**
+## **Fresh Install (via CLI)**
 
 Assuming you're using ovirt RPMs, you should start with install and deploy:
 
@@ -56,6 +56,23 @@ On the VM:
          # engine-setup
 
 When the engine-setup has completed on the VM, return to the host and complete the configuration. Your hosted engine VM is up and running!
+
+## **Fresh Install (via web UI)**
+Self-hosted engine can be deployed also via a web UI inroduced by cockpit.
+To use the web UI, first install cockpit-ovirt-dashboard on one of the hosts
+
+
+         # yum install cockpit-ovirt-dashboard
+         
+To deploy the self-hosted engine using the Cockpit user interface:
+1. Log in to the UI at https://HostIPorFQDN:9090 
+2. Navigate to Virtualization > Hosted Engine
+3. Select 'Hosted Engine Only Deployment' option
+4. Select a deployment method from the scroll down menu:
+   1. OTOPI-Based deployment - stable
+   2. Ansible-Based deployment - preview
+5. Press 'start' button
+
 
 **Notes:**
 
